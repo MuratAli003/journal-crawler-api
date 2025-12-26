@@ -2,17 +2,19 @@ package com.DergiPlatform.DergiPlatform.services;
 
 import com.DergiPlatform.DergiPlatform.models.Sayi;
 import com.DergiPlatform.DergiPlatform.models.Dergi;
+import com.DergiPlatform.DergiPlatform.router.JsoupRouter_DBlock;
+import com.DergiPlatform.DergiPlatform.router.JsoupRouter_OncekiSayi;
 import org.jsoup.*;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
 
-@Component
+@Service
 public class JsoupRouterService {
 
     @Autowired

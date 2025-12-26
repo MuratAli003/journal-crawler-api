@@ -1,4 +1,4 @@
-package com.DergiPlatform.DergiPlatform.services;
+package com.DergiPlatform.DergiPlatform.router;
 
 import com.DergiPlatform.DergiPlatform.models.Dergi;
 import com.DergiPlatform.DergiPlatform.models.Sayi;
@@ -25,7 +25,7 @@ public class JsoupRouter_OncekiSayi {
     @Autowired
     private SayiRepository sayiRepository;
 
-    List<Dergi> DergiAnaliz(String url) throws IOException, InterruptedException {
+    public List<Dergi> DergiAnaliz(String url) throws IOException, InterruptedException {
         Document doc = Jsoup.connect(url).get();
         Elements elements = doc.select("a[href*=detay&sayi]");
 
@@ -60,7 +60,7 @@ public class JsoupRouter_OncekiSayi {
         return dergiRepository.findAll();
     }
 
-    List<Sayi> SayiAnaliz(String url)throws IOException
+    public List<Sayi> SayiAnaliz(String url)throws IOException
     {
         Document doc = Jsoup.connect(url).get();
         List<Sayi> makaleler = new ArrayList<>();
