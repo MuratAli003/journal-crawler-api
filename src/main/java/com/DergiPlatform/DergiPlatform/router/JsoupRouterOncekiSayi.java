@@ -19,7 +19,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class JsoupRouter_OncekiSayi {
+public class JsoupRouterOncekiSayi {
     @Autowired
     private DergiRepository dergiRepository;
     @Autowired

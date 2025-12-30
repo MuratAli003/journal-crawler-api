@@ -20,7 +20,7 @@ public class RestMakaleController {
 
     //CRAWLER
     @PostMapping("/get-dergiler")
-    public boolean getDergiler(@RequestParam(name = "url") String url) throws IOException, InterruptedException {
+    public List<List<Dergi>> getDergiler(@RequestParam(name = "url") String url) throws IOException, InterruptedException {
         return jsoupRouter_Service.getDergiler(url);
     }
     @PostMapping("/get-dergi")
